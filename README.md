@@ -32,6 +32,9 @@ _This .Net MVC Core1.1. Application provides the CRUD functionality for the Prod
 * Visual Studio IDE
 * MAMP
 
+## Styling References Used
+https://www.haribo.com/enUS/products/haribo.html
+
 ### License
 
 * Copyright (c) 2017 by Parul Mishra.
