@@ -1,0 +1,28 @@
+﻿@model GummyBearKingdom.Models.Product
+
+@{
+    ViewData["Title"] = "Product - Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Product Details</h2>
+
+<div class="productDetails well">
+    <h3>@Html.DisplayNameFor(model => model.ProductName):  @Html.DisplayFor(model => model.ProductName)</h3>
+    <h3>@Html.DisplayNameFor(model => model.CountryOfOrigin) :  @Html.DisplayFor(model => model.CountryOfOrigin)</h3>
+    <h3>@Html.DisplayNameFor(model => model.ProductCost):  $@Html.DisplayFor(model => model.ProductCost)</h3>
+    <h3>@Html.DisplayNameFor(model => model.Image):  <img src="/img/@Html.DisplayFor(model => model.Image)"/></h3>
+</div>
+<div class="options">
+    <div class="row">
+        <div class="col-md-4">
+            <button type="button">@Html.ActionLink("Edit", "Edit", new { id = Model.ProductId })</button>
+        </div>
+        <div class="col-md-4">
+            <button type="button">@Html.ActionLink("Back to Product List", "Index")</button>
+        </div>
+        <div class="col-md-4">
+            <button type="button">@Html.ActionLink("Delete this Product", "Delete", new { id = Model.ProductId })</button>
+         </div>
+        <br><br>
+      </div>
+</div>

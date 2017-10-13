@@ -1,0 +1,29 @@
+﻿@model GummyBearKingdom.Models.Product
+
+@{
+    ViewData["Title"] = "Product-Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<hr/><hr/>
+<div class="well">
+<h2>Add A New Product</h2>
+
+@using (Html.BeginForm("Create", "Product", FormMethod.Post, new { enctype="multipart/form-data" }))
+{
+    @Html.LabelFor(model => model.ProductName)
+    @Html.EditorFor(model => model.ProductName)
+
+    @Html.LabelFor(model => model.CountryOfOrigin)
+    @Html.EditorFor(model => model.CountryOfOrigin)
+
+    @Html.LabelFor(model => model.ProductCost)
+    @Html.EditorFor(model => model.ProductCost)
+
+    @Html.LabelFor(model => model.Image)
+    @*@Html.EditorFor(model => model.Image)*@
+    <input type="file" name="files" />
+
+    <input type="submit" value="Create" class="btn btn-default" />
+}
+<button>@Html.ActionLink("Back to Products", "Index")</button>
+</div>
